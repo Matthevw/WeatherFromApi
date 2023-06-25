@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <head>
+        <css src="M2M_WeatherFromApi::css/_module.less"/>
+    </head>
+
+    <referenceContainer name="footer-container">
+        <container name="header.containertwo" as="header_containertwo" label="Page new Footer"  htmlTag="div" htmlClass="footer content" after="ul.footer.links"/>
+    </referenceContainer>
+
+    <referenceContainer name="header.containertwo">
+        <block class="M2M\WeatherFromApi\Block\Header" name="m2m-weather-api" template="M2M_WeatherFromApi::weather.phtml" cacheable="false"/>
+    </referenceContainer>
+
+    <!-- <referenceContainer name="header.container">
+        <container name="header.containertwo" as="header_containertwo" label="Page Header Container"  htmlTag="header" htmlClass="header-mini-container" after="footer.page-footer"/>
+    </referenceContainer>
+
+    <referenceContainer name="header.containertwo">
+        <block class="M2M\WeatherFromApi\Block\Header" name="m2m-weather-api" template="M2M_WeatherFromApi::weather.phtml" cacheable="false"/>
+    </referenceContainer> -->
+
+</page>

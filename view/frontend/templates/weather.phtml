@@ -1,0 +1,5 @@
+<?php
+       $weatherInfo = $block->getWeather();
+?>
+
+<span> <?= $weatherInfo["cityName"] . " " . $weatherInfo["temp"] . "°C" ?> <img src=<?= $weatherInfo["conditionIcon"] ?>> </span>
