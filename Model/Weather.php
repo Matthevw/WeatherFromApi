@@ -31,6 +31,7 @@ class Weather
         return $this->getWeather($this->generateQuery($url, $params));
     }
     
+    // Generates a query ready to be used by API
     private function generateQuery(string $url, array $params)
     {
         $generatedQuery = $url . "?";
@@ -38,11 +39,13 @@ class Weather
         foreach ($params as $key => $value) {
             $generatedQuery = $generatedQuery . $key . "=" . $value . "&";
         }
+
         $generatedQuery = rtrim($generatedQuery, "&");
 
         return $generatedQuery;
     }
 
+    // Gets data from API and returns specified information as array
     public function getWeather(string $url): array
     {
         $this->curl->get($url);
@@ -59,7 +62,4 @@ class Weather
 
         return $weatherInfo;
     }
-
-    
-
 }

@@ -25,8 +25,6 @@ class Header extends \Magento\Framework\View\Element\Template
     public function getWeather()
     {
         return $this->weather->getWeatherByCity("Warsaw");
-        // echo("Test");
     }
-
 }
 ?>
